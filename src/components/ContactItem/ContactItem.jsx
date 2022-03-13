@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ContactText, DeleteButton, ContactItem } from './ContactItem.styled';
 
-function ContItem({ name, number, id, onDeleteContact }) {
+function ContItem({ name, number, onDeleteContact }) {
   return (
     <ContactItem>
       <ContactText>
