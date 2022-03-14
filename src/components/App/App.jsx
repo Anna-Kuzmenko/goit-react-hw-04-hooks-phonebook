@@ -50,14 +50,12 @@ const App = () => {
   useEffect(() => {
     const contacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(contacts);
-    console.log('выполнился Юз');
 
     setContacts(parsedContacts);
   }, []);
 
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
-    console.log('выполнился Юз');
   }, [contacts]);
 
   return (
