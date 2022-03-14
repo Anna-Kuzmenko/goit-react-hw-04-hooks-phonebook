@@ -13,12 +13,19 @@ const ContactForm = ({ onSubmit }) => {
   const [number, setNumber] = useState('');
 
   const hendleNameChange = event => {
-    const inputName = event.currentTarget.name;
-    if (inputName === 'name') {
-      setName(event.currentTarget.value);
-    }
-    if (inputName === 'number') {
-      setNumber(event.currentTarget.value);
+    const { name, value } = event.currentTarget;
+
+    switch (name) {
+      case 'name':
+        setName(value);
+        break;
+
+      case 'number':
+        setNumber(value);
+        break;
+
+      default:
+        return;
     }
   };
 
