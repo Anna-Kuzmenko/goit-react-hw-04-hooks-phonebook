@@ -13,7 +13,7 @@ const ContactForm = ({ onSubmit }) => {
   const [number, setNumber] = useState('');
 
   const hendleNameChange = event => {
-    const { name, value } = event.currentTarget;
+    const { name, value } = event.target;
 
     switch (name) {
       case 'name':
